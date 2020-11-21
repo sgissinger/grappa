@@ -1,6 +1,17 @@
 import os
 import pytest
 
+from grappa import spy
+
+
+@spy('os.path.expanduser')
+@spy('os.path.join')
+def test_been_called_with_grappa_spy(
+    expect, os_path_expanduser=None, os_path_join=None
+):
+    os_path_join()
+    os_path_expanduser()
+
 
 def test_been_called(expect, mocker):
     mock_called = mocker.patch('os.path.join')

@@ -11,7 +11,8 @@ from .operator import Operator
 __all__ = (
     'operator',
     'attribute',
-    'register'
+    'register',
+    'spy'
 )
 
 
@@ -147,3 +148,25 @@ def mock_implementation_validator(func):
         return func(operator, subject, *args, **kwargs)
 
     return wrapper
+
+
+def spy(function_to_patch):
+    def actual_decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            print('------- Patching ' + function_to_patch)
+
+            spy_name = function_to_patch.replace('.', '_')
+
+            def spied():
+                print("spied object name: " + function_to_patch)
+
+            result = func(*args, **{spy_name: spied}, **kwargs)
+
+            print('------- Depatching ' + function_to_patch)
+
+            return result
+
+        return wrapper
+
+    return actual_decorator

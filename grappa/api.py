@@ -9,7 +9,7 @@ from .plugin import use
 # Expose config module as part of the public API
 from .config import config
 # Expose decorator for operators factory
-from .decorators import operator, register, attribute
+from .decorators import operator, register, attribute, spy
 # Expose Operatocdr base class
 from .operator import Operator
 # Required to load built-in operators
@@ -38,5 +38,6 @@ __all__ = (
     'Operator',
     'attribute',
     'operator',
-    'register'
+    'register',
+    'spy'
 )

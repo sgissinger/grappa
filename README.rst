@@ -115,7 +115,9 @@ See `error reporting`_ documentation for more details about how ``grappa`` error
     ======================================================================
     FAIL: tests.should_test.test_grappa_assert
     ======================================================================
-    The following assertion was not satisfied
+    File "grappa/tests/should_test.py", line 16, in test_grappa_assert
+    x | should.be.have.length.of(4)
+    AssertionError: The following assertion was not satisfied
       subject "[1, 2, 3]" should be have length of "4"
 
     Message

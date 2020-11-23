@@ -58,6 +58,7 @@ class OperatorResolver(object):
 
             # Trigger tests on function call if running as chained call
             if self.ctx.chained or self.ctx.subject is not empty:
+                __tracebackhide__ = True
                 return self.test._trigger()
 
             return self.test

@@ -219,7 +219,7 @@ Or install the latest sources from Github:
 .. _`getting started`: http://grappa.readthedocs.io/en/latest/getting-started.html
 .. _`plugins`: http://grappa.readthedocs.io/en/latest/plugins.html
 .. _`error reporting`: http://grappa.readthedocs.io/en/latest/error-reporting.html
-.. _`assertion styles`: http://grappa.readthedocs.io/en/latest/style.html
+.. _`assertion styles`: http://grappa.readthedocs.io/en/latest/assertions-styles.html
 .. _`grappa-http`: https://github.com/grappa-py/http
 
 .. |Build Status| image:: https://travis-ci.org/grappa-py/grappa.svg?branch=master

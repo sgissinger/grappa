@@ -83,7 +83,7 @@ See `documentation`_ and `getting started`_ for more examples.
       expect('foo').to.exists
 
       expect('bar').to.be.equal.to('bar', msg='value is not "bar"')
-      expect([1, 2, 3]).to.be.equal.to([1, 2, 3])
+      expect([1, 2, 3]).to.equal([1, 2, 3])
 
       expect('foo').to.be.a('string')
       expect({'foo': True}).to.be.a('dict')

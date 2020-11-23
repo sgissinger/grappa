@@ -1,4 +1,4 @@
-Error Reporting
+Error reporting
 ===============
 
 Feedback while testing is key. Seeing errors in your tests is not a nice thing

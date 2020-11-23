@@ -32,6 +32,7 @@ class OperatorResolver(object):
 
         # Self-trigger tests if running as global
         if self.ctx.chained or self.ctx.subject is not empty:
+            __tracebackhide__ = True
             self.test._trigger()
 
         return self.test
@@ -148,4 +149,5 @@ class OperatorResolver(object):
             ))
 
         # Register operator assertion for lazy execution
+        __tracebackhide__ = True
         return run_operator(operator) or self.test

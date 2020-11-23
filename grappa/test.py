@@ -89,6 +89,7 @@ class Test(BaseTest):
             return Test(subject).__getattr__(name)
 
         # Resolve and register operator by name
+        __tracebackhide__ = True
         return OperatorResolver(self).resolve(name)
 
     def _trigger(self):

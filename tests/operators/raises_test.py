@@ -34,6 +34,7 @@ def test_raises(should):
 
     no_error | should.do_not.raise_error(AssertionError)
 
+
 def test_raises_with_message_redirection(should):
     def error():
         raise AssertionError('foo')
